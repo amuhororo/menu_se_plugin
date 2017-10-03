@@ -59,7 +59,7 @@ http://hororo.wp.xdomain.jp/198/
 
 　◆記述例
 　　例：メニュー画面のボタンにSEを指定する場合。
-　　　[plugin name="menu_se" menu_item_clickse="decision5.ogg" menu_item_enterse="decision3.ogg" menu_item_leavese="cancel2.ogg"] 
+　　　[plugin name="menu_se" menu_item_clickse="click.ogg" menu_item_enterse="enter.ogg" menu_item_leavese="leave.ogg"] 
 　　　
 　　　※パラメータが多くて分りにくい場合は、init.ks を直接編集した方が簡単かもしれません。
 　　
