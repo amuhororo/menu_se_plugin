@@ -1,5 +1,5 @@
-;【メニューSE追加プラグイン Ver.1.00】
-; 2017/10/2更新　by hororo http://hororo.wp.xdomain.jp/
+;【メニューSE追加プラグイン Ver.1.01】
+; 2018/2/26更新　by hororo http://hororo.wp.xdomain.jp/
 [iscript]
 
 //メニューボタン（歯車）
@@ -30,12 +30,13 @@ TG.kag.tmp.menu_se = {
 
 
 
-var click_on = false;
-$(".button_menu").on({
-	"click": function() {
+var click_on;
+var _e = ($.userenv()=="pc") ? "mousedown" : "touchstart" ;
+$(".button_menu").on(_e,function() {
 		click_on = true;
 		if(mp.menubutton_clickse!="none")TG.ftag.startTag("playse",{storage:mp.menubutton_clickse,stop:"true"});
-	},
+});
+$(".button_menu").on({
 	"mouseenter": function() {
 		if(mp.menubutton_enterse!="none")TG.ftag.startTag("playse",{storage:mp.menubutton_enterse,stop:"true"});
 		click_on = false;
