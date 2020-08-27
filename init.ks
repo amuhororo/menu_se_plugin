@@ -1,4 +1,4 @@
-;【メニューSE追加プラグイン Ver.1.03 v504a対応】
+;【メニューSE追加プラグイン Ver.1.10 v504a対応】
 ; 2020/8/27更新　by hororo http://hororo.wp.xdomain.jp/
 [iscript]
 

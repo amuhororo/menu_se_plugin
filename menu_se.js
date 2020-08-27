@@ -1,4 +1,4 @@
-/*  メニューSE追加プラグイン ver1.03 v504a対応  */
+/*  メニューSE追加プラグイン ver1.10 v504a対応  */
 
 var menu_se = TYRANO.kag.tmp.menu_se;
 var click_on;
