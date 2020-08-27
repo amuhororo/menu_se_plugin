@@ -1,11 +1,11 @@
-/*  メニューSE追加プラグイン ver1.02  */
+/*  メニューSE追加プラグイン ver1.03 v504a対応  */
 
 var menu_se = TYRANO.kag.tmp.menu_se;
 var click_on;
 
 //メニューのボタン
 $(".menu_save,.menu_load,.menu_window_close,.menu_skip,.menu_back_title").on({
-	"touchstart mousedown": function(e) {
+	"touchstart click": function(e) {
 		click_on ++;
 		if(menu_se.menu_item_clickse!="none")TYRANO.kag.ftag.startTag("playse",{storage:menu_se.menu_item_clickse,stop:"true"});
 		e.preventDefault();
@@ -22,7 +22,7 @@ $(".menu_save,.menu_load,.menu_window_close,.menu_skip,.menu_back_title").on({
 
 //閉じるボタン
 $(".menu_close").on({
-	"touchstart mousedown": function(e) {
+	"touchstart click": function(e) {
 		click_on ++;
 		if(menu_se.menu_close_clickse!="none")TYRANO.kag.ftag.startTag("playse",{storage:menu_se.menu_close_clickse,stop:"true"});
 		e.preventDefault();
@@ -39,7 +39,7 @@ $(".menu_close").on({
 
 //セーブ・ロードデータ
 $(".save_list_item").on({
-	"touchstart mousedown": function(e) {
+	"touchstart click": function(e) {
 		click_on ++;
 		if(menu_se.save_list_clickse!="none")TYRANO.kag.ftag.startTag("playse",{storage:menu_se.save_list_clickse,stop:"true"});
 		e.preventDefault();
@@ -59,7 +59,7 @@ $(".save_list_item").on({
 
 //セーブ・バックログのスマホ用ボタン
 if(menu_se.button_smart_clickse!="none"){
-	$(".button_smart").on("touchstart mousedown",function(){
+	$(".button_smart").on("touchstart click",function(){
 		TYRANO.kag.ftag.startTag("playse",{storage:menu_se.button_smart_clickse,stop:"true"});
 		e.preventDefault();
 	});
