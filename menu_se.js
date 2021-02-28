@@ -1,4 +1,4 @@
-/*  メニューSE追加プラグイン ver1.10 v504a対応  */
+/*  メニューSE追加プラグイン ver1.10a v506e対応  */
 
 var menu_se = TYRANO.kag.tmp.menu_se;
 var click_on;
@@ -57,7 +57,7 @@ $(".save_list_item").on({
 });
 
 
-//セーブ・バックログのスマホ用ボタン
+//セーブ・バックログのスマホ用上下ボタン
 if(menu_se.button_smart_clickse!="none"){
 	$(".button_smart").on("touchstart click",function(){
 		TYRANO.kag.ftag.startTag("playse",{storage:menu_se.button_smart_clickse,stop:"true"});

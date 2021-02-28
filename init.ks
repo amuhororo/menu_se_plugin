@@ -1,5 +1,5 @@
-;【メニューSE追加プラグイン Ver.1.10 v504a対応】
-; 2020/8/27更新　by hororo http://hororo.wp.xdomain.jp/
+;【メニューSE追加プラグイン Ver.1.10a v506e対応】
+; 2021/02/28更新　by hororo http://hororo.wp.xdomain.jp/
 [iscript]
 
 //まとめ指定用
@@ -65,8 +65,8 @@ $(".button_menu").on({
 //モーダル用
 $(".remodal-confirm").on({
 	"touchstart click": function(e) {
-			click_on ++;
-			if(mp.confirm_clickse!="none")TG.ftag.startTag("playse",{storage:mp.confirm_clickse,stop:"true"});
+		click_on ++;
+		if(mp.confirm_clickse!="none")TG.ftag.startTag("playse",{storage:mp.confirm_clickse,stop:"true"});
 		e.preventDefault();
 	},
 	"mouseenter": function() {
@@ -79,9 +79,9 @@ $(".remodal-confirm").on({
 });
 $(".remodal-cancel").on({
 	"touchstart click": function(e) {
-			click_on ++;
-			if(mp.cancel_clickse!="none")TG.ftag.startTag("playse",{storage:mp.cancel_clickse,stop:"true"});
-			e.preventDefault();
+		click_on ++;
+		if(mp.cancel_clickse!="none")TG.ftag.startTag("playse",{storage:mp.cancel_clickse,stop:"true"});
+		e.preventDefault();
 	},
 	"mouseenter": function() {
 		click_on = 0;
@@ -92,9 +92,6 @@ $(".remodal-cancel").on({
 	}
 });
 
-
-$('head link:last').after('<style>html { -ms-touch-action: none; touch-action: manipulation;}</style>');
-$('head meta:last').after('<meta name="viewport" content="width=device-width">');
 [endscript]
 
 ;※※----他のシステム系プラグインを使う場合は、ここから-------------------------------
