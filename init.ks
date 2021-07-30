@@ -1,5 +1,5 @@
-;【メニューSE追加プラグイン Ver2.00 v507b対応】
-; 2021/05/30更新　by hororo http://hororo.wp.xdomain.jp/
+;【メニューSE追加プラグイン Ver2.01 v507b対応】
+; 2021/07/30更新　by hororo http://hororo.wp.xdomain.jp/
 [iscript]
 
 //---初期設定-----------------------------------------------------------------------------------------------
@@ -54,14 +54,6 @@ TG.kag.tmp.menu_se = {
 }
 [endscript]
 [loadjs storage="plugin/menu_se/menu_se_base.js"]
-
-
-;※※----他のシステム系プラグインを使う場合は、ここから-------------------------------
-[sysview type="menu" storage="./data/others/plugin/menu_se/html/menu.html"]
-[sysview type="load" storage="./data/others/plugin/menu_se/html/load.html"]
-[sysview type="save" storage="./data/others/plugin/menu_se/html/save.html"]
-[sysview type="backlog" storage="./data/others/plugin/menu_se/html/backlog.html"]
-;※※----ここまで削除--------------------------------------------------------------
 
 
 [macro name=menu_se_set]

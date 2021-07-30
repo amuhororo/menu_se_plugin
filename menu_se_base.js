@@ -1,4 +1,4 @@
-/*  メニューSE追加プラグイン ver2.00 v507b対応  */
+/*  メニューSE追加プラグイン ver2.01 v507b対応  */
 
 $(function(){
 	$('.button_menu,.remodal-confirm,.remodal-cancel').on('click mouseenter mouseleave',function(e){
