@@ -55,15 +55,13 @@
 			//ボタンのclass名取得
 			let button = $(this).attr("class");
 
-			//メニューとセーブエリアの名前調整
+			//ボタン名調整して確認
 			if(button != "menu_close" && $(this).parent().hasClass("menu_item")) button = "menu_item";
 			else if($(this).hasClass('save_list_item')) button = "save_list";
-
-			//classが複数ある場合
-			let classVals = button.split(' ');  //配列に
-			if(classVals.length>1){
+			else {
+				let classVals = button.split(' ');  //classを配列に
 				for (let element of classVals){
-					if(menu_se.selector.indexOf(element) > -1){
+					if(menu_se.selector.indexOf(element) > -1){ //selectorと一致するか確認
 						button = element;
 						break; //一致したら終了
 					}
@@ -135,7 +133,7 @@
 			let howl_array = "";
 			for (let element of Howler._howls){
 				howl_array += element._src; //登録済みファイルをテキトーに纏める。
-			};
+			}
 			sound.forEach(function (element, index) {
 				if(howl_array.indexOf("./data/sound/" + element) > -1) sound[index] = ""; //登録済みなら削除
 				else sound[index] = "./data/sound/" + element; //未登録ならフルパスに
