@@ -55,8 +55,14 @@
 			//ボタンのclass名取得
 			let button = $(this).attr("class");
 
+			//空想曲線さんのUIプラグイン対応
+			if(button === undefined ){
+				button = $(this).closest("div").attr("class");
+			}
+
 			//ボタン名調整して確認
-			if(button != "menu_close" && $(this).parent().hasClass("menu_item")) button = "menu_item";
+			if(button.indexOf("menu_close") > -1) button = "menu_close";
+			else if($(this).closest("div").hasClass("menu_item")) button = "menu_item";
 			else if($(this).hasClass('save_list_item')) button = "save_list";
 			else {
 				let classVals = button.split(' ');  //classを配列に
@@ -139,7 +145,7 @@
 				else sound[index] = "./data/sound/" + element; //未登録ならフルパスに
 			});
 			sound = sound.filter(Boolean); //空欄を削除
-			if(sound.length > 0) TYRANO.kag.ftag.startTag("preload",{storage:sound,stop:"true"});
+			if(sound.length > 0) TYRANO.kag.ftag.startTag("preload",{storage:sound,wait:pm.wait,stop:"true"});
 		}
 	};
 	if(TYRANO.kag.stat.mp.clickse || TYRANO.kag.stat.mp.enterse || TYRANO.kag.stat.mp.leavese){
